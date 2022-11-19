@@ -6,9 +6,9 @@ let hbs = require('hbs')
 let port = 4500
 
 //Path of file
-let staticapth = path.join("D:/Express/public")
-let template = path.join("D:/Express/template/views")
-let part = path.join("D:/Express/template/partials")
+let staticapth = path.join("D:/back-end/Express/public")
+let template = path.join("D:/back-end/Express/template/views")
+let part = path.join("D:/back-end/Express/template/partials")
 
 //to set the view engine
 app.set('view engine',"hbs")
@@ -17,18 +17,18 @@ hbs.registerPartials(part)
 
 //template engine route
 app.get('/',function (req,res) {
-    res.render("index",{
+    res.render("D:/back-end/Express/template/views/index.hbs",{
         call:"Home"
     }
     )
 })
 
 app.get("/about",function(req,res) {
-    res.render("about")
+    res.render("D:/back-end/Express/template/views/about.hbs")
 })
 
 app.get("/service",function (req,res) {
-    res.render("service")
+    res.render("D:/back-end/Express/template/views/service.hbs")
 })
 
 
